@@ -10,6 +10,15 @@ body {
   justify-content: space-between;
 }
 
+header {
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+header label {
+  color: white;
+}
+
 .facebook-login {
   display: flex;
 }
@@ -25,19 +34,27 @@ body {
 
 .main-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+main img {
+  height: 70%;
 }
 
 .left-content {
-  width: 800px;
+  width: 537px;
 }
 
 .right-content {
   width: 300px;
 }
 
+.right-content, .left-content {
+  
+}
+
 .right-content-input {
-  width: calc(100% - 8px);
+  width: 100%;
 }
 
 .flex-container {
@@ -72,4 +89,9 @@ body {
 
 .form-info {
   display: none;
+}
+.logo, .login {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }

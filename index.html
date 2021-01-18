@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,64 +19,106 @@
             <form class="facebook-login" action="">
                 <div class="form-group">
                     <label id="user-email-phone-label" for="user-email-phone">Email ou telefone</label>
-                    <input id="user-email-phone" type="text"></input>
+                    <input id="user-email-phone" class="input is-info" type="text"></input>
                 </div>
 
                 <div class="form-group">
                     <label id="user-password-label" for="user-password">Senha</label>
-                    <input id="user-password" type="password"></input>
+                    <input id="user-password" class="input is-info" type="password"></input>
                 </div>
 
                 <div class="form-control">
-                    <button id="button-login">Entrar</button>
+                    <button id="button-login" class="button">Entrar</button>
                 </div>
             </form>
         </div>
     </header>
+
     <main class="main-content">
+
         <section class="left-content">
             <p id="facebook-slogan">O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da
                 sua vida.</p>
             <img id="facebook-networking" src="imgs/networking.png" alt="Networking Facebook">
         </section>
         <section class="right-content">
-            <h1>Abra uma conta</h1>
-            <p class="quick-easy">É rápido e fácil.</p>
-            <form action="" id="form-signup">
-                <div class="name-input-roll flex-container">
-                    <input class="right-content-input info" type="text" name="firstname" placeholder="Nome" id="firstname">
-                    <input class="right-content-input info" type="text" name="lastname" placeholder="Sobrenome" id="lastname">
+            <div class="field">
+                <div class="control">
+                    <h1>Abra uma conta</h1>
                 </div>
-                <div>
-                    <input class="right-content-input info" type="text" name="phone_email" placeholder="Celular ou email" id="phone_email">
-                </div>
-                <div>
-                    <input class="right-content-input" type="password" name="password" placeholder="Nova senha" id="password">
-                </div>
-                <div>
-                    <label class="right-content-input" id="label-birthdate" for="">Data de nascimento</label>
-                    <input class="right-content-input info" type="text" name="birthdate" placeholder="dd/mm/aaaa" id="birthdate">
-                </div>
-                <label id="label-gender" for="">Gênero</label>
-                <div>
-                    <input value="Feminino" class="radio-button" type="radio" name="gender" id="female">
-                    <label for="female">Feminino</label>
+            </div>
 
-                    <input value="Masculino" class="radio-button" type="radio" name="gender" id="male">
-                    <label for="male">Masculino</label>
+            <div class="field">
+                <div class="control">
+                    <p class="quick-easy">É rápido e fácil.</p>
+                </div>
+            </div>
+            
+            
+            <div class="field">
+                <div class="control">
+                    <form action="" id="form-signup">
+                        <div class="field">
+                            <div class="control">
+                                <div class="name-input-roll flex-container">
+                                    <input class="right-content-input info input is-info" type="text" name="firstname"
+                                        placeholder="Nome" id="firstname">
+                                    <input class="right-content-input info input is-info" type="text" name="lastname"
+                                        placeholder="Sobrenome" id="lastname">
+                                </div>
+                                <div>
+                                    <input class="right-content-input info input is-info" type="text" name="phone_email"
+                                        placeholder="Celular ou email" id="phone_email">
+                                </div>
+                                <div>
+                                    <input class="right-content-input input is-info" type="password" name="password"
+                                        placeholder="Nova senha" id="password">
+                                </div>
+                            </div>
+                        </div>
 
-                    <input value="Personalizado" class="radio-button" type="radio" name="gender" id="custom">
-                    <label for="custom">Personalizado</label>
+                        <div class="field">
+                            <div class="control">
+                                <label class="right-content-input" id="label-birthdate" for="">Data de
+                                    nascimento</label>
+                                <input class="right-content-input info input is-info" type="text" name="birthdate"
+                                    placeholder="dd/mm/aaaa" id="birthdate">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <label id="label-gender" for="">Gênero</label>
+                                <div>
+                                    <input value="Feminino" class="radio-button" type="radio" name="gender" id="female">
+                                    <label for="female">Feminino</label>
+
+                                    <input value="Masculino" class="radio-button" type="radio" name="gender" id="male">
+                                    <label for="male">Masculino</label>
+
+                                    <input value="Personalizado" class="radio-button" type="radio" name="gender"
+                                        id="custom">
+                                    <label for="custom">Personalizado</label>
+                                </div>
+                                <div class="custom-gender-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <div class="flex-container signup-container">
+                                    <button id="facebook-register" class="button is-success" type="submit">Cadastre-se</button>
+                                    <div class="flex-container invalid-message-container">
+                                        <span class="invalid-message">Campos inválidos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="custom-gender-input">
-                </div>
-                <div class="flex-container signup-container">
-                    <button id="facebook-register" type="submit">Cadastre-se</button>
-                    <div class="flex-container invalid-message-container">
-                        <span class="invalid-message">Campos inválidos</span>
-                    </div>
-                </div>
-            </form>
+            </div>
+
             <div>
                 <div id="greetings"></div>
                 <div id="form-infos"></div>
@@ -84,4 +127,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

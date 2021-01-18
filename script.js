@@ -121,6 +121,9 @@ function createGenderInputField() {
   textInput.name = 'gender-custom';
   textInput.id = 'gender-custom';
   textInput.placeholder = 'Gênero (opcional)';
+  
+  textInput.classList.add('input')
+  textInput.classList.add('is-info')
 
   if (custonGenderInputDivChildNodeList.length === 0) {
     custonGenderInputDiv.appendChild(textInput);
